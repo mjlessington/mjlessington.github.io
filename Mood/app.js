@@ -1,13 +1,5 @@
 $(() => {
-// //connect Giphy API 
-// import { GiphyFetch } from '@giphy/js-fetch-api'
-
-// // use @giphy/js-fetch-api to fetch gifs, instantiate with your api key
-// const gf = new GiphyFetch('BJn5Vg6VhNf0ItUMRyaY5REl5zGNzEs1')
-
-// configure your fetch: fetch 10 gifs at a time as the user scrolls (offset is handled by the grid)
-// const { data: gif } = await gf.random({ tag: 'beer', type: 'stickers' })
-
+// connect Giphy API 
 
 
 const baseURL = `https://api.giphy.com/v1/gifs/random?`
@@ -18,31 +10,13 @@ let giphyURL = baseURL + apiKey + '&' + tag + '&' + rating
 
 // console.log(giphyURL)
 
-tag = 'tag=sad'
-const sad = () => {
-    $.ajax({
-        url: giphyURL
-    }).then((data) => {
-        // $('.container').html 
-
-        const $img = $('<img>').attr('src', data.data.image_url)
-      $('.container').append($img)
-        console.log(data.data.image_url) //pulls image from API
-  }, (error) => {
-    console.error(error)
-    })
-}
- sad()
-
- tag = 'tag=happy'
+tag = 'tag=happy'
 const happy = () => {
     $.ajax({
         url: giphyURL
     }).then((data) => {
-        // $('.container').html 
-
-        const $img = $('<img>').attr('src', data.data.image_url)
-      $('.container').append($img)
+       const $img = $('<img>').attr('src', data.data.image_url).hide()
+      $('#Happy').append($img)
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
     console.error(error)
@@ -50,15 +24,33 @@ const happy = () => {
 }
  happy()
 
+
+tag = 'tag=sad'
+const sad = () => {
+    $.ajax({
+        url: giphyURL
+    }).then((data) => {
+    const $img = $("<img id='sad-gif'>").attr('src', data.data.image_url).hide()
+      $('#Sad').append($img)
+
+        console.log(data.data.image_url) //pulls image from API
+  }, (error) => {
+    console.error(error)
+    
+    })
+    
+}
+sad()
+
+ 
+
  tag = 'tag=blah'
  const blah = () => {
      $.ajax({
          url: giphyURL
      }).then((data) => {
-         // $('.container').html 
- 
-         const $img = $('<img>').attr('src', data.data.image_url)
-       $('.container').append($img)
+         const $img = $('<img>').attr('src', data.data.image_url).hide()
+       $('#Ok').append($img)
          console.log(data.data.image_url) //pulls image from API
    }, (error) => {
      console.error(error)
@@ -71,10 +63,8 @@ const anxious = () => {
     $.ajax({
         url: giphyURL
     }).then((data) => {
-        // $('.container').html 
-
-        const $img = $('<img>').attr('src', data.data.image_url)
-      $('.container').append($img)
+        const $img = $('<img>').attr('src', data.data.image_url).hide()
+      $('#Anxious').append($img)
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
     console.error(error)
@@ -88,10 +78,8 @@ const anxious = () => {
      $.ajax({
          url: giphyURL
      }).then((data) => {
-         // $('.container').html 
- 
-         const $img = $('<img>').attr('src', data.data.image_url)
-       $('.container').append($img)
+         const $img = $('<img>').attr('src', data.data.image_url).hide()
+       $('#Angry').append($img) 
          console.log(data.data.image_url) //pulls image from API
    }, (error) => {
      console.error(error)
