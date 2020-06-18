@@ -10,27 +10,33 @@ let giphyURL = baseURL + apiKey + '&' + tag + '&' + rating
 
 // console.log(giphyURL)
 
-tag = 'tag=happy'
+tag = 'tag=very_happy'
 const happy = () => {
     $.ajax({
         url: giphyURL
     }).then((data) => {
-       const $img = $('<img>').attr('src', data.data.image_url).hide()
+       const $img = $("<img id='happy-gif'>").attr('src', data.data.image_url)
       $('#Happy').append($img)
+      
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
     console.error(error)
     })
 }
- happy()
+$('#Happy').on('click', happy);
 
+// const showHappy = () => {
+//     $("<img id='happy-gif'>").attr('src', data.data.image_url).show();
+// }
+// $('#Happy').on('click', showHappy);
+ 
 
-tag = 'tag=sad'
+tag = 'tag=very_sad'
 const sad = () => {
     $.ajax({
         url: giphyURL
     }).then((data) => {
-    const $img = $("<img id='sad-gif'>").attr('src', data.data.image_url).hide()
+    const $img = $("<img id='sad-gif'>").attr('src', data.data.image_url)
       $('#Sad').append($img)
 
         console.log(data.data.image_url) //pulls image from API
@@ -40,7 +46,7 @@ const sad = () => {
     })
     
 }
-sad()
+$('#Sad').on('click', sad); 
 
  
 
@@ -49,28 +55,28 @@ sad()
      $.ajax({
          url: giphyURL
      }).then((data) => {
-         const $img = $('<img>').attr('src', data.data.image_url).hide()
-       $('#Ok').append($img)
+         const $img = $('<img>').attr('src', data.data.image_url)
+       $('#Blah').append($img)
          console.log(data.data.image_url) //pulls image from API
    }, (error) => {
      console.error(error)
      })
  }
-  blah()
+ $('#Blah').on('click', blah); 
 
-  tag = 'tag=anxious'
+  tag = 'tag=anxiety'
 const anxious = () => {
     $.ajax({
         url: giphyURL
     }).then((data) => {
-        const $img = $('<img>').attr('src', data.data.image_url).hide()
+        const $img = $('<img>').attr('src', data.data.image_url)
       $('#Anxious').append($img)
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
     console.error(error)
     })
 }
- anxious()
+$('#Anxious').on('click', anxious)
 
 
  tag = 'tag=angry'
@@ -78,13 +84,12 @@ const anxious = () => {
      $.ajax({
          url: giphyURL
      }).then((data) => {
-         const $img = $('<img>').attr('src', data.data.image_url).hide()
+         const $img = $('<img>').attr('src', data.data.image_url)
        $('#Angry').append($img) 
          console.log(data.data.image_url) //pulls image from API
    }, (error) => {
      console.error(error)
      })
  }
-  angry()
-    
+ $('#Angry').on('click', angry);     
 })
