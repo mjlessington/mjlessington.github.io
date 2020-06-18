@@ -1,4 +1,4 @@
-
+$(() => {
 // //connect Giphy API 
 // import { GiphyFetch } from '@giphy/js-fetch-api'
 
@@ -12,15 +12,31 @@
 
 const baseURL = `https://api.giphy.com/v1/gifs/random?`
 const apiKey = `api_key=BJn5Vg6VhNf0ItUMRyaY5REl5zGNzEs1`
-let tag = `tag=hello`
+let tag = ``
 let rating = 'rating=PG-13'
 let giphyURL = baseURL + apiKey + '&' + tag + '&' + rating
 
+// console.log(giphyURL)
+
+tag = 'tag=sad'
+const sad = () => {
+    $.ajax({
+        url: giphyURL
+    }).then((data) => {
+        // $('.container').html 
+
+        const $img = $('<img>').attr('src', data.data.image_url)
+      $('.container').append($img)
+        console.log(data.data.image_url) //pulls image from API
+  }, (error) => {
+    console.error(error)
+    })
+}
+ sad()
 
 
-console.log(giphyURL)
 
-$(() => {
+
 
     
 })
