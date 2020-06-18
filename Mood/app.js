@@ -34,9 +34,69 @@ const sad = () => {
 }
  sad()
 
+ tag = 'tag=happy'
+const happy = () => {
+    $.ajax({
+        url: giphyURL
+    }).then((data) => {
+        // $('.container').html 
+
+        const $img = $('<img>').attr('src', data.data.image_url)
+      $('.container').append($img)
+        console.log(data.data.image_url) //pulls image from API
+  }, (error) => {
+    console.error(error)
+    })
+}
+ happy()
+
+ tag = 'tag=blah'
+ const blah = () => {
+     $.ajax({
+         url: giphyURL
+     }).then((data) => {
+         // $('.container').html 
+ 
+         const $img = $('<img>').attr('src', data.data.image_url)
+       $('.container').append($img)
+         console.log(data.data.image_url) //pulls image from API
+   }, (error) => {
+     console.error(error)
+     })
+ }
+  blah()
+
+  tag = 'tag=anxious'
+const anxious = () => {
+    $.ajax({
+        url: giphyURL
+    }).then((data) => {
+        // $('.container').html 
+
+        const $img = $('<img>').attr('src', data.data.image_url)
+      $('.container').append($img)
+        console.log(data.data.image_url) //pulls image from API
+  }, (error) => {
+    console.error(error)
+    })
+}
+ anxious()
 
 
-
-
+ tag = 'tag=angry'
+ const angry = () => {
+     $.ajax({
+         url: giphyURL
+     }).then((data) => {
+         // $('.container').html 
+ 
+         const $img = $('<img>').attr('src', data.data.image_url)
+       $('.container').append($img)
+         console.log(data.data.image_url) //pulls image from API
+   }, (error) => {
+     console.error(error)
+     })
+ }
+  angry()
     
 })
