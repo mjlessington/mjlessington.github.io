@@ -17,13 +17,20 @@ const happy = () => {
     }).then((data) => {
        const $img = $("<img id='happy-gif'>").attr('src', data.data.image_url)
       $('#Happy').append($img)
-      
+            
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
     console.error(error)
     })
+    // $('#happy-gif').fadeOut();
 }
-$('#Happy').on('click', happy);
+$('#Happy').on('click', happy)
+
+
+
+
+
+
 
 // const showHappy = () => {
 //     $("<img id='happy-gif'>").attr('src', data.data.image_url).show();
@@ -90,6 +97,7 @@ $('#Anxious').on('click', anxious)
    }, (error) => {
      console.error(error)
      })
+
  }
  $('#Angry').on('click', angry);     
 })

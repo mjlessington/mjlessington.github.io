@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     /* align-content: center; */
     /* box-sizing: content-box; */
+    margin-bottom: 40px;
 }
 h1 {
     margin: 0, 0, 0, 50px;  
@@ -27,11 +28,15 @@ button {
     height: 80px;
     width: 300px;
     color: blue;
-    font-size: larger;
+    font-size: 40px;
     font-weight: bold;
     background-color: rgba(255, 255, 255, .4);
+    
 }
-p {
-    background-color: #0be62966;
+footer {
+    background-color: rgba(0, 0, 0, .4);
     text-align: center;
+    color: greenyellow;
+    font-size: larger;
+    margin-top: 20px;
 }
