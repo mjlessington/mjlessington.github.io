@@ -32,7 +32,7 @@ $('#Happy').on('click', happy)
 const fade_out = () => {
   $("#happy-gif").fadeOut().empty();
 }
-setTimeout(fade_out, 6000);
+setTimeout(fade_out, 5000);
 
 
 
@@ -61,7 +61,10 @@ const sad = () => {
     
 }
 $('#Sad').on('click', sad); 
-
+const fade_out = () => {
+    $("#sad-gif").fadeOut().empty();
+  }
+  setTimeout(fade_out, 5000);
  
 
  tag = 'tag=blah'
@@ -69,7 +72,7 @@ $('#Sad').on('click', sad);
      $.ajax({
          url: giphyURL
      }).then((data) => {
-         const $img = $('<img>').attr('src', data.data.image_url)
+         const $img = $("<img id='blah-gif'>").attr('src', data.data.image_url)
        $('#Blah').append($img)
          console.log(data.data.image_url) //pulls image from API
    }, (error) => {
@@ -77,13 +80,18 @@ $('#Sad').on('click', sad);
      })
  }
  $('#Blah').on('click', blah); 
+ const fade_out = () => {
+    $("#blah-gif").fadeOut().empty();
+  }
+  setTimeout(fade_out, 5000);
+
 
   tag = 'tag=anxiety'
 const anxious = () => {
     $.ajax({
         url: giphyURL
     }).then((data) => {
-        const $img = $('<img>').attr('src', data.data.image_url)
+        const $img = $("<img id='anxious-gif'>").attr('src', data.data.image_url)
       $('#Anxious').append($img)
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
@@ -91,14 +99,17 @@ const anxious = () => {
     })
 }
 $('#Anxious').on('click', anxious)
-
+const fade_out = () => {
+    $("#happy-gif").fadeOut().empty();
+  }
+  setTimeout(fade_out, 5000);
 
  tag = 'tag=angry'
  const angry = () => {
      $.ajax({
          url: giphyURL
      }).then((data) => {
-         const $img = $('<img>').attr('src', data.data.image_url)
+         const $img = $("<img id='angry-gif'>").attr('src', data.data.image_url)
        $('#Angry').append($img) 
          console.log(data.data.image_url) //pulls image from API
    }, (error) => {
