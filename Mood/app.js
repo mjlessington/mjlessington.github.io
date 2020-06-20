@@ -29,21 +29,11 @@ $('#Happy').on('click', happy)
 //make gif disappear after a period of time
 //ref code from ====>>> https://stackoverflow.com/questions/1911290/make-div-text-disappear-after-5-seconds-using-jquery#:~:text=call%20the%20div%20set%20the,hide()%20as%20well.&text=You%20may%20need%20to%20display%20div%20text%20again%20after%20it%20has%20disappeared.
 
-const fade_out = () => {
+const happyFade_out = () => {
   $("#happy-gif").fadeOut().empty();
 }
-setTimeout(fade_out, 5000);
+setTimeout(happyFade_out, 5000);
 
-
-
-
-
-
-// const showHappy = () => {
-//     $("<img id='happy-gif'>").attr('src', data.data.image_url).show();
-// }
-// $('#Happy').on('click', showHappy);
- 
 
 tag = 'tag=very_sad'
 const sad = () => {
@@ -61,10 +51,10 @@ const sad = () => {
     
 }
 $('#Sad').on('click', sad); 
-const fade_out = () => {
+const SadFade_out = () => {
     $("#sad-gif").fadeOut().empty();
   }
-  setTimeout(fade_out, 5000);
+  setTimeout(SadFade_out, 5000);
  
 
  tag = 'tag=blah'
@@ -80,10 +70,11 @@ const fade_out = () => {
      })
  }
  $('#Blah').on('click', blah); 
- const fade_out = () => {
+ 
+ const blahFade_out = () => {
     $("#blah-gif").fadeOut().empty();
   }
-  setTimeout(fade_out, 5000);
+  setTimeout(blahFade_out, 5000);
 
 
   tag = 'tag=anxiety'
@@ -99,10 +90,10 @@ const anxious = () => {
     })
 }
 $('#Anxious').on('click', anxious)
-const fade_out = () => {
-    $("#happy-gif").fadeOut().empty();
+const anxiousFade_out = () => {
+    $("#anxious-gif").fadeOut().empty();
   }
-  setTimeout(fade_out, 5000);
+  setTimeout(anxiousFade_out, 5000);
 
  tag = 'tag=angry'
  const angry = () => {
@@ -117,5 +108,15 @@ const fade_out = () => {
      })
 
  }
- $('#Angry').on('click', angry);     
+ $('#Angry').on('click', angry);   
+
+const angryFade_out = () => {
+    $("#angry-gif").fadeOut().empty();
+  }
+  setTimeout(angryFade_out, 5000);
+
+ 
+
+
+
 })
