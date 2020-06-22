@@ -19,7 +19,7 @@ h1 {
 }
 .emotions {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
    
     
@@ -33,7 +33,7 @@ button {
     background-color: rgba(255, 255, 255, .4);
     
 }
-img {
+.img-here {
     z-index: 5;
     display: flex;
     flex-direction: column;
