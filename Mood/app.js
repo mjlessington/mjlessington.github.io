@@ -4,7 +4,7 @@ $('.slider').bxSlider({
   autoControls: true,
   auto: false,
   pager: true,
-  slideWidth: 800,
+  slideWidth: 1500,
   adaptiveHeight: true,
   mode: 'fade',
   captions: false,
@@ -54,7 +54,7 @@ const sad = () => {
         url: giphyURL
     }).then((data) => {
     const $img = $("<img id='sad-gif'>").attr('src', data.data.image_url)
-      $('.item2').append($img)
+      $('#item2').append($img)
 
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
