@@ -1,7 +1,7 @@
 
 /*for mobile devies*/
 /* no code ref but used https://coder-coder.com/media-query-breakpoints/ as a resource in finding px tp em conversion and gen device sizes*/
-@media (max-width: 43em) { 
+@media (max-width: 20em) { 
     body {max-width: 43em;}
     
    
@@ -58,7 +58,7 @@ h3 {
 }
 button {
     height: 80px;
-    width: 18.75em;
+    width: 18.75rem;
     color: blue;
     font-size: 40px;
     font-weight: bold;
