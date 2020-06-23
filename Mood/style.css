@@ -2,8 +2,8 @@
 /*for mobile devies*/
 /* no code ref but used https://coder-coder.com/media-query-breakpoints/ as a resource in finding px tp em conversion and gen device sizes*/
 @media (max-width: 43em) { 
-    .container {max-width: 43em;}
-    .emotions {max-width: 43em;}
+    body {max-width: 43em;}
+    
    
 }
 /*for tablets*/
@@ -52,7 +52,7 @@ h3 {
 .emotions {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: center;
    
     
 }
