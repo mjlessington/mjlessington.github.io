@@ -7,7 +7,6 @@ body {
     display: flex;
     flex-direction: column; 
     align-content: center; 
-    /* box-sizing: content-box;  */
     margin-bottom: 40px;
 } 
 h1 {
@@ -20,6 +19,23 @@ h1 {
 h2 {
     font-size: 40px;
     text-align: center;
+    color: hotpink;
+    /* add flash lines 23-35 ==>REF: https://codepen.io/iPawan/pen/BKkCo*/
+	-webkit-animation: flash linear 1s infinite; 
+	animation: flash linear 1s infinite;
+}
+@-webkit-keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+h3 {
+    font-size: 35px;
 }
 .emotions {
     display: flex;
@@ -38,7 +54,7 @@ button {
     
 }
 
-/*Slideshow styling */
+/* Slideshow styling
 .slideshow-container {
     overflow: hidden;
     position: relative;
@@ -64,7 +80,7 @@ li {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 /* .img-here {
     z-index: 5;
     display: flex;
@@ -72,11 +88,11 @@ li {
     align-items: center;
 } */
     
-
+/* 
 footer {
     background-color: rgba(0, 0, 0, .4);
     text-align: center;
     color: greenyellow;
     font-size: larger;
     margin-top: 20px;
-}
+} */
