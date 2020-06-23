@@ -1,6 +1,16 @@
 $(() => {
 // connect Giphy API 
-
+$('.slider').bxSlider({
+  autoControls: true,
+  auto: false,
+  pager: true,
+  slideWidth: 800,
+  adaptiveHeight: true,
+  mode: 'fade',
+  captions: false,
+  speed: 1000,
+  minSlide: 3
+})
 
 const baseURL = `https://api.giphy.com/v1/gifs/random?`
 const apiKey = `api_key=BJn5Vg6VhNf0ItUMRyaY5REl5zGNzEs1`
@@ -16,9 +26,10 @@ const happy = () => {
         url: giphyURL
     }).then((data) => {
        const $img = $("<img id='happy-gif'>").attr('src', data.data.image_url)
-      $('.img-here').append($img)
-      setTimeout($('#happy-gif').fadeOut(5000));   
-        console.log(data.data.image_url) //pulls image from API
+      $('#item2').append($img)
+      
+
+      console.log(data.data.image_url) //pulls image from API
   }, (error) => {
     console.error(error)
     })
@@ -117,8 +128,10 @@ const angryFade_out = () => {
   }
   setTimeout(angryFade_out, 5000);
 
+ //////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////APP UPDATE!!!!! INSTEAD OF FADEOUT FUNCTION, CREATE SLIDER THAT RENDERS GIF, /////////////////////CORRESPONDING MESSAGE AND LINK TO A CORRESPONDING RESOURCE////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
  
-
-
+  
 
 })

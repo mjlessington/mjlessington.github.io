@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood</title>
     <link rel="stylesheet" href="style.css">
+    <link href="bxslider-4-master/src/css/jquery.bxslider.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="bxslider-4-master/src/js/jquery.bxslider.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
     <h1>How are you feeling today?</h1>
+    <h2>(click your mood)</h2>
     <div class= 'container'>
+        
         <div class = emotions>
+            
             <button id="Happy">Happy</button>
             <button id="Sad">Sad</button>
             <button id="Blah">Just OK</button>
@@ -19,17 +24,14 @@
             <button id="Angry">Angry</button>
         </div>
 
-        <!-- Create slider for Gif, message, resource -->
-        <div class= 'slide-container'>
-            <ul id= 'slidehsow'>
-                <li id= 'item-1'></li>
-                <li id= 'item-2'></li>
-                <li id= 'item-3'></li>
-            </ul>
-
+        <!-- Create slider for Gif, message, resource; slider files source github.com/stevenwanderski/bxslider-4 -->
+        <div class="slider">
+            <div id='item1'><h2>No matter what situation you find yourself in, know that you matter, you're worth the best life has to offer, and that things always work out for your highest good. </h2><a href="http://" target="_blank" rel="noopener noreferrer"></a></div>
+            <div id='item2'></div>
+            <div id='item3'><h2>If you or someone you know is struggling emotionally or having a hard time, please <a href="https://suicidepreventionlifeline.org/mental-health-suicide-prevention-glossary/">Click Here</a> for helpful resources</h2></div>
         </div>
     </div>
-
+  
 </body>
 <footer>
     <p>If you or someone you know is struggling emotionally or having a hard time, please <a href="https://suicidepreventionlifeline.org/mental-health-suicide-prevention-glossary/">Click Here</a> for helpful resources</p>
