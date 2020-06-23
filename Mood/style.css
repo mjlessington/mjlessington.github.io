@@ -3,6 +3,7 @@
 /* no code ref but used https://coder-coder.com/media-query-breakpoints/ as a resource in finding px tp em conversion and gen device sizes*/
 @media (max-width: 43em) { 
     .container {max-width: 43em;}
+    .emotions {max-width: 43em;}
    
 }
 /*for tablets*/
@@ -65,40 +66,10 @@ button {
     position: relative;
 }
 
-/* Slideshow styling
-.slideshow-container {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 300px;
-}
-.slideshow {
-    overflow: hidden;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-li {
+.slider {
     display: inline;
-    float: left;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    height: 100%;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-/* .img-here {
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-    
+    margin: auto, 0;
+}
 
 footer {
     background-color: rgba(0, 0, 0, .6);

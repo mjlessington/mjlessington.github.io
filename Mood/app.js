@@ -4,7 +4,7 @@ $('.slider').bxSlider({
   autoControls: true,
   auto: false, //default is true
   pager: true,
-  slideWidth: 1500, //default is 800
+  slideWidth: 1800, //default is 800
   adaptiveHeight: true, //default is false
   mode: 'fade',
   captions: false,
