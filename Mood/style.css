@@ -3,6 +3,7 @@
 /* no code ref but used https://coder-coder.com/media-query-breakpoints/ as a resource in finding px tp em conversion and gen device sizes*/
 @media (max-width: 43em) { 
     .container {max-width: 43em;}
+   
 }
 /*for tablets*/
 @media (max-width: 62em) { 
@@ -49,7 +50,7 @@ h3 {
 }
 .emotions {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
    
     
@@ -63,9 +64,7 @@ button {
     background-color: rgba(255, 255, 255, .6);
     position: relative;
 }
-img {
-    object-position: center;
-}
+
 /* Slideshow styling
 .slideshow-container {
     overflow: hidden;
