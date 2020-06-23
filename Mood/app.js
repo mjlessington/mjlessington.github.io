@@ -9,7 +9,7 @@ $('.slider').bxSlider({
   mode: 'fade',
   captions: false,
   speed: 1000,
-  minSlide: 3
+  minSlide: 2
 })
 
 const baseURL = `https://api.giphy.com/v1/gifs/random?`
@@ -54,7 +54,7 @@ const sad = () => {
         url: giphyURL
     }).then((data) => {
     const $img = $("<img id='sad-gif'>").attr('src', data.data.image_url)
-      $('.img-here').append($img)
+      $('.item2').append($img)
 
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
@@ -67,7 +67,7 @@ $('#Sad').on('click', sad);
 const SadFade_out = () => {
     $("#sad-gif").fadeOut().empty();
   }
-  setTimeout(SadFade_out, 5000);
+  // setTimeout(SadFade_out, 5000);
  
 
  tag = 'tag=blah'
@@ -76,7 +76,7 @@ const SadFade_out = () => {
          url: giphyURL
      }).then((data) => {
          const $img = $("<img id='blah-gif'>").attr('src', data.data.image_url)
-       $('#Blah').append($img)
+       $('#item2').append($img)
          console.log(data.data.image_url) //pulls image from API
    }, (error) => {
      console.error(error)
@@ -87,7 +87,7 @@ const SadFade_out = () => {
  const blahFade_out = () => {
     $("#blah-gif").fadeOut().empty();
   }
-  setTimeout(blahFade_out, 5000);
+  // setTimeout(blahFade_out, 5000);
 
 
   tag = 'tag=anxiety'
@@ -96,7 +96,7 @@ const anxious = () => {
         url: giphyURL
     }).then((data) => {
         const $img = $("<img id='anxious-gif'>").attr('src', data.data.image_url)
-      $('#Anxious').append($img)
+      $('#item2').append($img)
         console.log(data.data.image_url) //pulls image from API
   }, (error) => {
     console.error(error)
@@ -106,7 +106,7 @@ $('#Anxious').on('click', anxious)
 const anxiousFade_out = () => {
     $("#anxious-gif").fadeOut().empty();
   }
-  setTimeout(anxiousFade_out, 5000);
+  // setTimeout(anxiousFade_out, 5000);
 
  tag = 'tag=angry'
  const angry = () => {
@@ -114,7 +114,7 @@ const anxiousFade_out = () => {
          url: giphyURL
      }).then((data) => {
          const $img = $("<img id='angry-gif'>").attr('src', data.data.image_url)
-       $('#Angry').append($img) 
+       $('#item2').append($img) 
          console.log(data.data.image_url) //pulls image from API
    }, (error) => {
      console.error(error)
@@ -126,7 +126,7 @@ const anxiousFade_out = () => {
 const angryFade_out = () => {
     $("#angry-gif").fadeOut().empty();
   }
-  setTimeout(angryFade_out, 5000);
+  // setTimeout(angryFade_out, 5000);
 
  //////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////APP UPDATE!!!!! INSTEAD OF FADEOUT FUNCTION, CREATE SLIDER THAT RENDERS GIF, /////////////////////CORRESPONDING MESSAGE AND LINK TO A CORRESPONDING RESOURCE////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
