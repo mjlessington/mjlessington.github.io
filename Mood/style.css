@@ -1,9 +1,13 @@
 
-@media (max-width: 43em) {
+/*for mobile devies*/
+/* no code ref but used https://coder-coder.com/media-query-breakpoints/ as a resource in finding px tp em conversion and gen device sizes*/
+@media (max-width: 43em) { 
     .container {max-width: 43em;}
 }
-
-
+/*for tablets*/
+@media (max-width: 62em) { 
+    .container {max-width: 62em;}
+}
 body {
     background-image: url(https://images.unsplash.com/photo-1575278220902-cdf1a07a0421?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
     
@@ -52,7 +56,7 @@ h3 {
 }
 button {
     height: 80px;
-    width: 300px;
+    width: 18.75em;
     color: blue;
     font-size: 40px;
     font-weight: bold;
