@@ -1,0 +1,12 @@
+html, body{
+    background-image: url("./assets/joanna-kosinska-1_CMoFsPfso-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: auto;
+}
+
+.jumbotron {
+    background-color: rgb(255, 228, 196, .5);
+    
+}
