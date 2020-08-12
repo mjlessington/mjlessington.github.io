@@ -7,6 +7,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Divider from '@material-ui/core/Divider';
 import Chip from '@material-ui/core/Chip';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 
 
 
@@ -16,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(3,2)
     },
     flex: {
-        display: 'flex'
+        display: 'flex',
+        alignItems: 'center'
     },
     sectionWindow: {
         width: '30%',
@@ -26,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
     },
     chatWindow: {
         width: '70%',
-        height: '300px'
+        height: '300px',
+        padding: '10px'
 
     },
     chatBox: {
@@ -36,11 +40,12 @@ const useStyles = makeStyles((theme) => ({
     button: {
         width:'15%'
 
-    },
+    }
   }));
   
   export default function MainChat() {
     const classes = useStyles();
+    const [textValue, changeTextValue]= React.useState('');
   
     return (
      <div>
@@ -68,23 +73,26 @@ const useStyles = makeStyles((theme) => ({
 
                 </div>
                 <div className={classes.chatWindow}>
-                
                         {
                             [{from:'user', msg: 'Welcome'}].map((chat, i) => (
-                                <div className={classes.flex} key={}>
-                                <Chip label="Basic" />
+                                <div className={classes.flex} key={i}>
+                                <Chip label={chat.from} className={classes.chip} />
+                                <Typography variant="p"> {chat.msg} </Typography>
+                                </div>
 
                             ))
                         }
-                
-
                 </div>
-                
-
             </div>
             <div className={classes.flex}>
-
-
+            <TextField id="filled-basic" 
+                label="Type Message" 
+                className={classes.chatBox} 
+                variant="filled"
+                value={textValue} 
+                onChange={e => changeTextValue(e.target.value)}/>
+            <Button variant="contained" color="primary">Send</Button>
+                                    
             </div>
         </Paper> 
 
