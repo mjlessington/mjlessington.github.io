@@ -83,7 +83,7 @@ const useStyles = makeStyles((theme) => ({
                 </div>
                 <div className={classes.chatWindow}>
                         {
-                            [{from:'user', msg: 'Welcome'}].map((chat, i) => (
+                            allChats[activeSection].map((chat, i) => (
                                 <div className={classes.flex} key={i}>
                                 <Chip label={chat.from} className={classes.chip} />
                                 <Typography variant="body1" gutterBottom> {chat.msg} </Typography>
