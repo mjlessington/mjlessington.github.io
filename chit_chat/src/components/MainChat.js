@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
 
     //Store
-    const [allChats]= React.useContext(CTX);
+    const [allChats, sendChatAction]= React.useContext(CTX);
     const sections = Object.keys(allChats);
 
 
@@ -100,7 +100,18 @@ const useStyles = makeStyles((theme) => ({
                 variant="filled"
                 value={textValue} 
                 onChange={e => changeTextValue(e.target.value)}/>
-            <Button variant="contained" color="primary">Send</Button>
+            <Button 
+                variant="contained" 
+                color="primary"
+                className={classes.button}
+                onClick={() => {
+                    sendChatAction(textValue); 
+                    changeTextValue('');
+                }}
+                
+                >
+                Send
+            </Button>
                                     
             </div>
         </Paper> 
