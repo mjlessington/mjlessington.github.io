@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,6 +9,8 @@ import Divider from '@material-ui/core/Divider';
 import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+
+import {CTX} from './Store.js'
 
 
 
@@ -45,6 +47,14 @@ const useStyles = makeStyles((theme) => ({
   
   export default function MainChat() {
     const classes = useStyles();
+
+    //Store
+    const [allChats]= React.useContext(CTX);
+    const sections = Object.keys(allChats);
+
+
+    //local state
+    const [activeSection, changeActiveSection]= React.useState(sections[0])
     const [textValue, changeTextValue]= React.useState('');
   
     return (
@@ -54,18 +64,17 @@ const useStyles = makeStyles((theme) => ({
                 Chit Chat
             </Typography>
             <Typography variant="h6" gutterBottom>
-                Chat Room
+                {activeSection}
             </Typography>
             <Divider />
             <div className={classes.flex}>
                 <div className={classes.sectionWindow}>
                     <List>
                         {
-                            [].map(section => (
-                                <div className= {classes.flex}>
-
-
-                                </div>
+                            sections.map(section => (
+                                <ListItem onClick={e => changeActiveSection(e.target.innerText)} key={section} button>
+                                    <ListItemText primary={section} />
+                                </ListItem>
 
                             ))
                         }
@@ -77,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
                             [{from:'user', msg: 'Welcome'}].map((chat, i) => (
                                 <div className={classes.flex} key={i}>
                                 <Chip label={chat.from} className={classes.chip} />
-                                <Typography variant="p"> {chat.msg} </Typography>
+                                <Typography variant="body1" gutterBottom> {chat.msg} </Typography>
                                 </div>
 
                             ))

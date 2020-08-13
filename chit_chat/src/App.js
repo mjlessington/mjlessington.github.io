@@ -1,15 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import 'fontsource-roboto';
 import MainChat from './components/MainChat.js'
+import Store from './components/Store.js'
 
 
 
 function App() {
   return (
     <div className="App">
-     <MainChat />
+      <Store>
+        <MainChat />
+      </Store>
     </div>
   );
 }
