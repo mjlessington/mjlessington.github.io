@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
 
     //Store
-    const [allChats, sendChatAction]= React.useContext(CTX);
+    const {allChats, sendChatAction} = React.useContext(CTX);
     const sections = Object.keys(allChats);
 
 

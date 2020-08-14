@@ -50,12 +50,13 @@ function reducer(state, action) {
     }
 }
 
-function sendChatAction (socket, value) {
+
+let socket;
+
+function sendChatAction (value) {
     socket.emit('chat message', value);
 
 }
-
-let socket;
 
 export default function Store(props) {
     
