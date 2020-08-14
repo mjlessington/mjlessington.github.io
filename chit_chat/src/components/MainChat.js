@@ -49,7 +49,9 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
 
     //Store
-    const {allChats, sendChatAction} = React.useContext(CTX);
+    const {allChats, sendChatAction, user} = React.useContext(CTX);
+    // console.log(allChats);
+    // console.log(React.useContext(CTX));
     const sections = Object.keys(allChats);
 
 
@@ -105,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
                 color="primary"
                 className={classes.button}
                 onClick={() => {
-                    sendChatAction(textValue); 
+                    sendChatAction({ from: user, msg:textValue, section: activeSection}); 
                     changeTextValue('');
                 }}
                 
