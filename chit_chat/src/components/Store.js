@@ -71,7 +71,7 @@ export default function Store(props) {
         
     }
     
-    const user = 'Mell' + Math.random(100).toFixed(2)
+    const user = 'user' + Math.random(100).toFixed(2)
     
    
         return (
