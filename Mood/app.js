@@ -18,7 +18,7 @@ let tag = ``
 let rating = 'rating=PG-13'
 let giphyURL = baseURL + apiKey + '&' + tag + '&' + rating
 
-// console.log(giphyURL)
+
 
 tag = 'tag=very_happy'
 const happy = () => {
@@ -36,16 +36,6 @@ const happy = () => {
     
 }
 $('#Happy').on('click', happy)
-
-//make gif disappear after a period of time
-//ref code from ====>>> https://stackoverflow.com/questions/1911290/make-div-text-disappear-after-5-seconds-using-jquery#:~:text=call%20the%20div%20set%20the,hide()%20as%20well.&text=You%20may%20need%20to%20display%20div%20text%20again%20after%20it%20has%20disappeared. 
-
-// const happyFade_out = () => {
-//   $("#happy-gif").fadeOut().empty();
-//   $(".img-here").load(".img-here > *");
-// }
-
-// setTimeout(happyFade_out, 5000);
 
 
 tag = 'tag=very_sad'
